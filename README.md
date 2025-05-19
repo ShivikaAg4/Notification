@@ -55,6 +55,8 @@ spring.rabbitmq.port=5672
 spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
 
+---
+
 ###Running locally
 # Clone the repository
 git clone https://github.com/ShivikaAg4/Notification.git
