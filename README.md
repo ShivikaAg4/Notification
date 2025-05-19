@@ -57,37 +57,10 @@ spring.rabbitmq.password=guest
 
 ---
 
-###Running locally
-# Clone the repository
+
+## 🏃‍♀️ **Running Locally**
+
+**🔧 Clone the repository**
+```bash
 git clone https://github.com/ShivikaAg4/Notification.git
 cd Notification
-
-# Build the app
-mvn clean install
-
-# Run the app
-mvn spring-boot:run
-
-###POST
-REST API Documentation
-🔹 Send Notification
-{
-  "userId": "user123",
-  "message": "Welcome to the app!",
-  "type": "IN_APP",
-  "timestamp": "2025-05-19T12:00:00"
-}
-
-Postman
-You can test this API using Postman:
-Import the request manually or create a collection.
-Use the /send endpoint with the above JSON.
-Make sure RabbitMQ and MongoDB are running locally.
-
-Assumptions Made
-The system currently handles only IN_APP notifications by saving them in MongoDB.
-Retry logic is hardcoded to 3 attempts for failed deliveries.
-Jackson is used for serializing/deserializing notification messages.
-
-
-
