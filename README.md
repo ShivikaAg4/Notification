@@ -2,7 +2,6 @@
 
 This is a **Spring Boot-based Notification Service** using **RabbitMQ** and **MongoDB**. It supports multiple notification types like **In-App**, and is extendable to **Email** and **SMS**. The service uses a message queue for scalability and decoupling.
 
-![Architecture](https://github.com/user-attachments/assets/aaa776c5-bc88-44b2-b24f-5143f176a975)
 
 ---
 
