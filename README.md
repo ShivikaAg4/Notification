@@ -52,7 +52,7 @@ spring.rabbitmq.host=localhost
 spring.rabbitmq.port=5672
 spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
----
+
 ```
 ### 📄 Running Locally
 ```# Clone the repository
