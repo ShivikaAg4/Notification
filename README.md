@@ -1,4 +1,4 @@
-# 📣 Notification Service
+![image](https://github.com/user-attachments/assets/aaa776c5-bc88-44b2-b24f-5143f176a975)# 📣 Notification Service
 
 This is a **Spring Boot-based Notification Service** using **RabbitMQ** and **MongoDB**. It supports multiple notification types like **In-App**, and is extendable to **Email** and **SMS**. The service uses a message queue for scalability and decoupling.
 
@@ -45,22 +45,58 @@ NotificationServiceApplication/
 - RabbitMQ running (default port: 5672)
 
 ---
-
-### 📄 Configuration (`application.properties`)
-
+### 📄 Configuration (`application.properties)
 ```properties
 spring.data.mongodb.uri=mongodb://localhost:27017/notificationdb
 spring.rabbitmq.host=localhost
 spring.rabbitmq.port=5672
 spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
-
 ---
-
-
-## 🏃‍♀️ **Running Locally**
-
-**🔧 Clone the repository**
-```bash
+```
+### 📄 Running Locally
+```# Clone the repository
 git clone https://github.com/ShivikaAg4/Notification.git
 cd Notification
+
+# Build the app
+mvn clean install
+
+# Run the app
+mvn spring-boot:run
+```
+---
+### REST API DOCUMENTATION
+
+### Send Notification(POST)
+
+{
+  "userId": "user123",
+  "message": "Welcome to the app!",
+  "type": "IN_APP",
+  "timestamp": "2025-05-19T12:00:00"
+}
+
+###  🧪 Postman
+
+You can test this API using Postman:
+
+Import the request manually or create a collection.
+
+Use the /send endpoint with the above JSON.
+
+Make sure RabbitMQ and MongoDB are running locally.
+
+
+
+ ### Assumptions Made
+The system currently handles only IN_APP notifications by saving them in MongoDB.
+
+Retry logic is hardcoded to 3 attempts for failed deliveries.
+
+Jackson is used for serializing/deserializing notification messages.
+
+
+
+
+
